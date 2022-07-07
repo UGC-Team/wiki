@@ -4,6 +4,9 @@
     - [Config lua environment](#config-lua-environment)
     - [Config lua external library](#config-lua-external-library)
   - [Visual Code](#visual-code)
+    - [Download & Install](#download--install-1)
+    - [Config lua environment](#config-lua-environment-1)
+    - [Config lua external library](#config-lua-external-library-1)
 - [Link 2](#link-2)
 - [Link 3](#link-3)
 - [Link 4](#link-4)
@@ -12,6 +15,8 @@
 # Config LUA development environment
 
 ## IntelliJ IDEA(Community Edition)
+
+* Reference: https://github.com/EmmyLua/IntelliJ-EmmyLua
 
 ### Download & Install
 
@@ -35,6 +40,23 @@
 * Select folder lua you want to add, for example: `C:\Program Files (x86)\sandboxol\BlockmanEditor\lua`
 
 ## Visual Code
+
+* Reference: https://github.com/EmmyLua/VSCode-EmmyLua
+
+### Download & Install
+
+* Download Visual Code: https://code.visualstudio.com/download
+* Install Visual Code.
+
+### Config lua environment
+
+* Select `Extensions`.
+* Search `EmmyLua` and click `Install`.
+* Restart Visual Code after installation complete.
+
+### Config lua external library
+
+* TODO
 
 # Link 2
 
