@@ -3,12 +3,12 @@
     - [Download & Install](#download--install)
     - [Config lua environment](#config-lua-environment)
     - [Config lua external library](#config-lua-external-library)
+    - [How to debug lua using `Remote Debug`](#how-to-debug-lua-using-remote-debug)
   - [Visual Code](#visual-code)
     - [Download & Install](#download--install-1)
     - [Config lua environment](#config-lua-environment-1)
     - [Config lua external library](#config-lua-external-library-1)
-- [Link 2](#link-2)
-- [Link 3](#link-3)
+- [Configs the PC's Environment variables](#configs-the-pcs-environment-variables)
 - [Link 4](#link-4)
 - [Link 5](#link-5)
 
@@ -30,7 +30,8 @@
 * Search `EmmyLua` and click `Install`.
 * Restart IDEA after installation complete.
 * Reference: https://emmylua.github.io/installation.html
-  
+![intellij_lua_extension](./snapshot/intellij_lua_extension.png)
+
 ### Config lua external library
 
 * Open project folder.
@@ -38,6 +39,22 @@
 * Select `Libraries`.
 * Click button `Add`, select `Lua Zip Library`.
 * Select folder lua you want to add, for example: `C:\Program Files (x86)\sandboxol\BlockmanEditor\lua`
+![intellij_lua_library](./snapshot/intellij_lua_library.png)
+
+### How to debug lua using `Remote Debug`
+
+* The root directory of the source code must be set: open the menu `File` -> `Project Structure`. Select the source folder and select `Mark as Sources`
+![intellij_debug_config0](./snapshot/intellij_debug_config0.png)
+* To configure `Remote debugging` settings, click on the upper right corner `Edit Configurations`
+![intellij_debug_config1](./snapshot/intellij_debug_config1.png)
+* Add `Lua Remote(Mobdebug)`
+![intellij_debug_config2](./snapshot/intellij_debug_config2.png)
+* Settings `Name` and `Port`, click `OK`
+![intellij_debug_config3](./snapshot/intellij_debug_config3.png)
+* Click the `debug button` in the upper right corner
+![intellij_debug_config4](./snapshot/intellij_debug_config4.png)
+* Pay attention to the IDEA console LOG output, as shown in the following ![intellij_debug_config5](./snapshot/intellij_debug_config5.png)
+* Reference: https://emmylua.github.io/run.html
 
 ## Visual Code
 
@@ -69,14 +86,7 @@
 * Find the `Library` property, then click `Add Item`. Copy the path to your libraries.
 * Click `OK` to take the effect.
 
-# Link 2
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet sollicitudin neque. Duis id mi ligula. In viverra velit vitae tortor congue dapibus. Integer vestibulum, turpis sed tempor viverra, ligula nibh commodo leo, nec lacinia nibh erat a sapien. Nullam nec sodales est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque varius eu dolor nec consectetur. Vestibulum sagittis ultricies erat, sed tincidunt magna dapibus at.
-
-Ut elementum, dui sed scelerisque consectetur, mi nisi elementum diam, non rhoncus lacus lectus ut lacus. Aenean eget mauris risus. Integer placerat, augue at fringilla dignissim, massa sapien mollis arcu, quis faucibus nulla risus et quam. Vestibulum a lacus in mauris ultricies mattis. Suspendisse malesuada venenatis tristique. Nulla facilisi. Praesent a tempus ipsum. Nulla facilisi.
-
 # Configs the PC's Environment variables
-
 
 1. On the Windows taskbar, right-click the **Windows** icon and select **System**.
 2. In the **Settings** window, under **Related Settings**, click **Advanced system settings**
