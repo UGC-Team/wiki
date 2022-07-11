@@ -58,11 +58,65 @@ test_play/20220711_week1
 
 # Development flow
 
+## Development new feature
+
 ```mermaid
 graph TD;
-    Create branch `develop`->`feature` --> Implement feature;   
-    Implement feature --> Merge into `debug` for debugging;    
-    Merge into `debug` for debugging --> Merge into `develop` for review;    
-    Merge into `develop` for review --> Merge into `master` for release;    
-    Merge into `master` for release; --> Create branch/tag for stored;    
+    id1["Create branch `develop`->`feature`"]
+    id2["Implement feature"]
+    id3["Merge into `debug` for debugging"]
+    id4["Merge into `develop` for review if needed"]
+    id5["Merge into `master` for release"]
+    id6["Create branch/tag"]
+    id1 --> id2;      
+    id2 --> id3;    
+    id3 --> id4;    
+    id4 --> id5;    
+    id5 --> id6;    
+```
+
+## Fix bug when the game is running on live
+```mermaid
+graph TD;
+    id1["Create branch `develop`->`fixbug`"]
+    id2["Fix bug in branch"]
+    id3["Merge into `debug` for debugging"]
+    id4["Merge into `develop` for review if needed"]
+    id5["Merge into `master` for release"]
+    id6["Create branch/tag"]
+    id1 --> id2;      
+    id2 --> id3;    
+    id3 --> id4;    
+    id4 --> id5;    
+    id5 --> id6;    
+```
+
+## Resolve code conflicts:
+
+### Resolve conflict when merging from `feature` to `develop`: 
+
+* Merge branch from branch `develop` into branch `feature`. 
+* Manual resolve conflicts on branch `feature`.
+* Then merge `feature` back into `develop`
+
+```mermaid
+graph TD;
+    id1["Merge branch from branch `develop` into branch `feature`"]
+    id2["Manual resolve conflicts on branch `feature`"]
+    id3["Merge `feature` back into `develop`"]
+    id1 --> id2;      
+    id2 --> id3;      
+```
+
+### Resolve conflicts when merging from `feature` to `debug`: 
+
+* Merge branch from branch `feature` into branch `debug`. 
+* Manual resolve conflict on `debug` branch.
+* **Never merge branch `debug` into branch `feature` or `develop`. Because the `debug` branch usually contains debug information that doesn't need to be released.**
+
+```mermaid
+graph TD;
+    id1["Merge branch from branch `feature` into branch `debug`"]
+    id2["Manual resolve conflict on `debug` branch"]
+    id1 --> id2;         
 ```
