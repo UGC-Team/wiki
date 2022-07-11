@@ -3,16 +3,22 @@
   - [Branch merge rule](#branch-merge-rule)
   - [Branching Naming Convention](#branching-naming-convention)
 - [Development flow](#development-flow)
+  - [Development new feature](#development-new-feature)
+  - [Fix bug when the game is running on live](#fix-bug-when-the-game-is-running-on-live)
+  - [Resolve code conflicts:](#resolve-code-conflicts)
+    - [Resolve conflict when merging from `feature` to `develop`:](#resolve-conflict-when-merging-from-feature-to-develop)
+    - [Resolve conflicts when merging from `feature` to `debug`:](#resolve-conflicts-when-merging-from-feature-to-debug)
 
 # Branch rule
 
 ## Branch flow
 
 ![branch_rule](./snapshot/branch_rule.png)
+
 * `master`: Branch is for release, never push code to this branch. It should be stable all the time and won’t allow any direct check-in. You can only merge it after code review.
-* `develop`: Middle branch used to implement the feature, created from branch `master`, all feature branches will merge into this. The `develop` branch’s idea is to make changes in it and restrict the developers from making any changes in the master branch directly `develop` branch, then this `develop` branch will merge into `master` branch
+* `develop`: Middle branch used to implement the feature, created from branch `master`, all feature branches will merge into this. The `develop` branch’s idea is to make changes in it and restrict the developers from making any changes in the `master` branch directly, then this `develop` branch will merge into `master` branch
 * `feature`: Use for feature implement. Created from `develop` branch
-* `debug`: Use for debug
+* `debug`: Use for external debug, or test play
 
 ## Branch merge rule
 
@@ -67,7 +73,7 @@ graph TD;
     id3["Merge into `debug` for debugging"]
     id4["Merge into `develop` for review if needed"]
     id5["Merge into `master` for release"]
-    id6["Create branch/tag"]
+    id6["Create branch/tag to store"]
     id1 --> id2;      
     id2 --> id3;    
     id3 --> id4;    
@@ -83,7 +89,7 @@ graph TD;
     id3["Merge into `debug` for debugging"]
     id4["Merge into `develop` for review if needed"]
     id5["Merge into `master` for release"]
-    id6["Create branch/tag"]
+    id6["Create branch/tag to store"]
     id1 --> id2;      
     id2 --> id3;    
     id3 --> id4;    
