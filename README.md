@@ -5,7 +5,9 @@
 ### [Coding Standards](./coding_standard.md)
 ### [Performance Optimization Manual](./performance_optimization.md)
 
-## TODO-1
+## Graphic
+
+### [3D Assets Optimization Guideline](https://docs.google.com/presentation/d/19FRr9JtohK7X8VjtlNmtWlSp3RYZL6Ukywwhrrgq6SQ/edit#slide=id.p)
 
 ## TODO-2
 
