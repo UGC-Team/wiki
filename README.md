@@ -4,6 +4,7 @@
 ### [Development Flow](./development_flow.md)
 ### [Coding Standards](./coding_standard.md)
 ### [Performance Optimization Manual](./performance_optimization.md)
+### [BME Troubleshooting Checklist](https://docs.google.com/spreadsheets/d/1UqUAnFh6AAF_56aBY8EheKljaljXI-ECJYvtrvu09Fk/edit#gid=882894612)
 
 ## Graphic
 
